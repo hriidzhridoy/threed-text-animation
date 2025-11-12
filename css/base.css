@@ -30,7 +30,7 @@ body {
 }
 
 .demo-1 {
-  --color-bg: #4b45af;
+  --color-bg: #3228eb;
 }
 
 .demo-2 {
@@ -80,7 +80,7 @@ a {
   grid-template-columns: auto auto auto;
   grid-template-areas:
     'title title title'
-    'back archive github'
+    'back archive github linkedin'
     'demos demos demos'
     'tags tags tags'
     'sponsor sponsor sponsor';
@@ -115,6 +115,10 @@ a {
     grid-area: github;
   }
 
+  .frame__linkedin {
+    grid-area: linkedin;
+  }
+
   .frame__tags {
     grid-area: tags;
     display: flex;
@@ -136,32 +140,33 @@ a {
     }
   }
 
-  @media screen and (min-width: 53em) {
-    padding: var(--page-padding);
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    grid-template-columns: auto auto auto auto 1fr;
-    grid-template-rows: auto auto;
-    align-content: space-between;
-    grid-template-areas:
-      'title back github archive demos'
-      'tags tags tags sponsor sponsor';
+ @media screen and (min-width: 53em) {
+  padding: var(--page-padding);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-template-columns: auto auto auto auto auto 1fr;
+  grid-template-rows: auto auto;
+  align-content: space-between;
+  grid-template-areas:
+    'title back github linkedin archive demos'
+    'tags tags tags sponsor sponsor sponsor';
 
-    .frame__tags {
-      align-self: end;
-    }
-
-    .frame__demos,
-    #cdawrap {
-      justify-self: end;
-      text-align: right;
-      max-width: 225px;
-      line-height: 1.4;
-    }
+  .frame__tags {
+    align-self: end;
   }
+
+  .frame__demos,
+  #cdawrap {
+    justify-self: end;
+    text-align: right;
+    max-width: 225px;
+    line-height: 1.4;
+  }
+}
+
 }
 
 .content {

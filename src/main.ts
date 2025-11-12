@@ -1,14 +1,14 @@
-import './cylinder/cylinder.css';
-import './circle/circle.css';
-import './tube/tube.css';
+import "./cylinder/cylinder.css";
+import "./circle/circle.css";
+import "./tube/tube.css";
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-import { Cylinder } from './cylinder/cylinder';
-import { Circle } from './circle/circle';
-import { Tube } from './tube/tube';
+import { Cylinder } from "./cylinder/cylinder";
+import { Circle } from "./circle/circle";
+import { Tube } from "./tube/tube";
 
 class App {
   smoother!: ScrollSmoother;
@@ -42,7 +42,7 @@ class App {
   }
 
   addEventListeners(): void {
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       this.cylinder.resize();
       this.circle.resize();
       this.tube.resize();
